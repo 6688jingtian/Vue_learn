@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>POST交互</title>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<button @click="post()">点击</button>
+		</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{},
+				methods:{
+					post:function(){
+						this.$http.post('b.php',{a:1,b:20},{emulateJSON:true}).
+						then(function(res){
+							alert(res.data);
+						},function(res){
+							alert(res.status);
+						});
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

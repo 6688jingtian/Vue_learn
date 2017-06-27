@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+			<input type="submit" value="点我" v-on:click="show()" id="box"/>
+			<!--
+				angular适用于大型项目，上手难，所有属性都需绑定在$scope上
+				vue试用于移动端，上手易，一片html代码中创建一个新vue对象，并在其中放入json
+			-->
+		<script>
+				new Vue({
+				el:'#box',
+				data:{
+					a:12,
+					b:25
+				},
+				methods:{
+					show:function(){
+						alert("我哈哈哈");
+						alert(this.a);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

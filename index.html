@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>vue学习</title>
+		<script src="js/vue.js"></script>
+		<script>
+		 	//常用指令
+		 	//扩展标签功能属性,数据和angular都是双向绑定
+		 	window.onload=function()
+		 	{
+		 		new Vue({
+		 	    	el:'div',
+		 		    data:{
+		 			msg:'welcome vue!',
+		 			msg2:'123',
+		 			arr:['apple','orange','hello'],
+		 			json:{
+		 				a:'a',
+		 				b:'b'
+		 			}
+		 		    }
+		 	    });
+		 	}; 
+		 </script>
+	</head>
+	<body>
+		 	<div>
+		 		<input type="text" v-model="msg" /><!--v-model表单元素-->
+			 	<input type="text" v-model="msg" />    
+			 	<br />
+			 	{{msg}}
+			 	<br />
+			 	{{msg2}}
+			 	<br />
+			 	<ul>
+			 		<li v-for='value in arr'>
+			 			{{value}}
+			 		</li>
+			 	</ul>
+			 	{{json.a}}
+			 	<hr />
+		 	<ul>
+		 		<li v-for='value in json'><!--循环（相当于angular中的ng-repeat）-->
+		 			{{value}}
+		 		</li>
+		 	</ul>
+		 	</div>
+	</body>
+</html>

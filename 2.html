@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>双向数据绑定</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body id="box">
+		{{a}}
+		<input type="text" v-model="a"/>
+		<input type="text" v-model="a"/>
+		<script>
+			new Vue({
+				el:'#box',
+				data:
+				{
+					a:10,
+					b:20
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>GET交互</title>
+		<script src="js/vue.js"></script>
+		<script src="js/vue-resource.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<button @click="get()">点击</button>
+		</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+				},
+				methods:{
+					get:function(){
+						this.$http.get('a.php',{a:10,b:20}).then(function(res){
+							alert(res.data);
+						},function(res){
+							alert(res.status);
+						});
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

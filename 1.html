@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box" v-for="i in arr">
+			{{i}}
+		</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+					a:12,
+					b:25,
+					arr:[12,25,85,98,78]
+				}
+			});
+		</script>
+	</body>
+</html>

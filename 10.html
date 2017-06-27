@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>class style用法有一点特殊</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box" :style="json">我是周杰伦</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+					json:{
+						color:'red',
+					    backgroundColor:'blue'//复合样式需要使用驼峰命名法
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

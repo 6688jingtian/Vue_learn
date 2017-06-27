@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件冒泡</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box" @click="show1()">
+			<input type="submit" value="提交" @contextmenu.prevent="show2()"/>
+			<!--	
+			右键好使
+			stop=cancleBubble=true;阻止事件冒泡
+			prevent=preventDefault;阻止默认事件
+			-->
+		</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+				},
+				methods:{
+					show1:function(){
+						alert('我是1');
+					},
+					show2:function(ev){
+						alert('我是2');
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

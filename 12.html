@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过滤器</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			{{a|uppercase|lowercase}}
+			{{a|lowercase|capitalize}}
+			{{220|currency'RMB'}}
+			<!--过滤器可以传参-->
+		</div>
+         <script>
+         	new Vue({
+         		el:'#box',
+         		data:{
+         		   	a:'my'
+         		}
+         	});
+         </script>
+	</body>
+</html>

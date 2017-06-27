@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="box">
+			<img :src="src" alt="" :height="w"/>
+		</div>
+	    <script>
+	    	new Vue({
+	    		el:'#box',
+	    		data:{
+	    			src:'http://www.baidu.com/img/bd_logo1.png',
+	    			w:'100px'
+	    		}
+	    	});
+	    </script>
+	</body>
+</html>

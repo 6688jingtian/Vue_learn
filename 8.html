@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>键盘事件</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+			<input type="text"  @keydown.enter="show($event)" id="box"/>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+				},
+				methods:{
+					show:function(ev){
+						alert('您按回车了');
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

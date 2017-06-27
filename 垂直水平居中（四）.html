@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>垂直水平居中（四）</title>
+		<style>
+			div
+		    {
+		    	 width: 100px;
+			     height: 100px;
+			     position: absolute;
+			     text-align: center;
+			     background: yellow;
+			     left:50%;
+			     top:50%;
+			     margin: -50px 0 0 -50px;
+			     /*50%为自身尺寸的一半，其实这个方法的思路是这样的：要让元素居中就给他left50%好了。可是元
+			     * 素本身还有宽度，left50%之后元素的左边位于页面的中间而不是元素本 身。所以就给元素加一个包
+			     * 裹层，让这个包裹层left50%，然后要居中的元素本身只要相对于他的包裹层再左移50%即left-5*/
+			 }
+		</style>
+	</head>
+	<body>
+		<div></div><!--上右下左-->
+	</body>
+</html>

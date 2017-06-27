@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>事件深入</title>
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<button id="box" @click="show($event,12)">点我</button>
+	<script>
+		new Vue({
+			el:'#box',
+			data:{
+				msg:12
+			},
+			methods:{
+				show:function(ev,b){
+					alert(ev.clientX);
+					alert(b);
+				}
+			}
+		});
+	</script>
+</body>
+</html>
